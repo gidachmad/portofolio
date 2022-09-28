@@ -1,23 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import NavIcon from './Components/NavIcon';
+import Silhouette from './Components/Silhouette';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App relative font-press-start">
+      <Silhouette />
+
+      <ol className='flex bg-slate-400 fixed border-t-4 border-gray-800 bottom-0 p-2 w-full'>
+        <NavIcon />
+      </ol>
     </div>
   );
 }
