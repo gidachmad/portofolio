@@ -1,5 +1,10 @@
 import React from 'react'
+import Accordion from '../Accordion'
 
 export default function Skills() {
-  return <div>SkillTree</div>
+  return (
+    <div className='card rounded-border'>
+      <Accordion />
+    </div>
+  )
 }

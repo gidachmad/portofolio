@@ -1,12 +1,12 @@
+import { Outlet } from 'react-router-dom'
 import NavLayout from './Components/NavLayout'
-import PlayerCard from './Components/PlayerCard'
 
 function App() {
   return (
     <>
       <NavLayout />
       <div className='container'>
-        <PlayerCard />
+        <Outlet />
       </div>
     </>
   )

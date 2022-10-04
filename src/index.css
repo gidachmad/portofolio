@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monda&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 html {
-  scroll-behavior: smooth;
+  @apply scroll-smooth font-monda;
 }
 
 img {
@@ -12,12 +16,32 @@ img {
   width: 100%;
 }
 
-.personal-data {
-  @apply grid grid-cols-4 gap-y-4 w-11/12 mx-auto;
+/* .active {
+  @apply;
+} */
+
+.divider {
+  @apply border-t-8 rounded-xl border-gray-800 mx-auto;
 }
 
-.personal-data > p:nth-child(even) {
+.full-height {
+  height: 100vh;
+}
+
+.personal-data {
+  @apply grid grid-cols-4 gap-y-4 w-11/12 mx-auto mb-6;
+}
+
+.personal-data > dl {
   @apply col-span-3;
+}
+
+dl > ul > li::before {
+  content: '[ ';
+}
+
+dl > ul > li::after {
+  content: ' ]';
 }
 
 .rounded-border {
@@ -25,15 +49,15 @@ img {
 }
 
 .container {
-  @apply relative font-press-start flex flex-col pt-10 mb-28 mx-auto;
+  @apply relative flex leading-6 text-xl flex-col pt-6 mb-24 mx-auto flex-1;
 }
 
 .nav {
-  @apply fixed  bottom-0 z-10 w-full;
+  @apply fixed bottom-0 z-10 w-full;
 }
 
 .title-card {
-  @apply w-fit px-8 py-2 mb-6 mx-auto bg-gray-600 border-4 border-gray-800 text-white;
+  @apply w-fit text-2xl px-8 py-2 mb-6 mx-auto bg-gray-600 border-4 border-gray-800 text-white;
 }
 
 .card {
